@@ -1,0 +1,32 @@
+get:
+  summary: Get detailed champion data
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_champions"
+  operationId: getDetailedChampion
+  parameters:
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+    - name: language
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/LanguageString.yaml
+    - name: champion
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/ChampionIdString.yaml
+  responses:
+    "200":
+      description: Detailed champion object
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ChampionDetailedResponse.yaml
+          example:
+            $ref: ../components/examples/ChampionDetailedExample.json
+    "403":
+      description: Detailed champion object could not be loaded

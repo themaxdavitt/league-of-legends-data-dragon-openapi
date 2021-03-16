@@ -1,0 +1,63 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  description:
+    type: string
+  tooltip:
+    type: string
+  leveltip:
+    type: object
+    properties:
+      label:
+        type: array
+        items:
+          type: string
+      effect:
+        type: array
+        items:
+          type: string
+  maxrank:
+    type: number
+  cooldown:
+    type: array
+    items:
+      type: number
+  cooldownBurn:
+    type: string
+  cost:
+    type: array
+    items:
+      type: number
+  costBurn:
+    type: string
+  effect:
+    type: array
+    items:
+      type: array
+      items:
+        type: number
+      nullable: true
+  effectBurn:
+    type: array
+    items:
+      type: string
+      nullable: true
+  vars:
+    type: array
+  costType:
+    type: string
+  maxammo:
+    type: string
+  range:
+    type: array
+    items:
+      type: number
+  rangeBurn:
+    type: string
+  image:
+    $ref: ./Image.yaml
+  resource:
+    type: string

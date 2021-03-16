@@ -1,0 +1,32 @@
+type: object
+properties:
+  type:
+    $ref: ./TypeString.yaml
+  version:
+    $ref: ./VersionString.yaml
+  basic:
+    $ref: ./Item.yaml
+  data:
+    type: object
+    additionalProperties:
+      $ref: ./Item.yaml
+  groups:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        MaxGroupOwnable:
+          type: string
+  tree:
+    type: array
+    items:
+      type: object
+      properties:
+        header:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string

@@ -1,0 +1,10 @@
+type: object
+properties:
+  type:
+    $ref: ./TypeString.yaml
+  format:
+    $ref: ./FormatString.yaml
+  version:
+    $ref: ./VersionString.yaml
+  data:
+    type: object

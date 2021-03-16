@@ -1,0 +1,27 @@
+get:
+  summary: Get items
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_champions"
+  operationId: getItems
+  parameters:
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+    - name: language
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/LanguageString.yaml
+  responses:
+    "200":
+      description: Object describing all items
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ItemsResponse.yaml
+          example:
+            $ref: ../components/examples/ItemsExample.json
+    "403":
+      description: Object describing all items could not be loaded

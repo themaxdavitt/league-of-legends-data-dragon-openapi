@@ -1,0 +1,16 @@
+get:
+  summary: Get all valid Data Dragon versions
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_versions"
+  operationId: getVersions
+  responses:
+    "200":
+      description: Array of Data Dragon version strings
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VersionsResponse.yaml
+          example:
+            $ref: ../components/examples/Versions.json
+    "403":
+      description: Data Dragon version strings could not be loaded

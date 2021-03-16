@@ -1,0 +1,27 @@
+get:
+  summary: Get summoner spells
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_summoner-spells"
+  operationId: getSummonerSpells
+  parameters:
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+    - name: language
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/LanguageString.yaml
+  responses:
+    "200":
+      description: Object mapping champion IDs to champion summaries
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/SummonerSpellsResponse.yaml
+          example:
+            $ref: ../components/examples/SummonerSpellsExample.json
+    "403":
+      description: Object mapping champion IDs to champion summaries could not be loaded

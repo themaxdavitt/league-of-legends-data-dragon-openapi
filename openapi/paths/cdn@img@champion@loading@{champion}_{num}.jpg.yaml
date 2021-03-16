@@ -1,0 +1,26 @@
+get:
+  summary: Get champion loading screen asset
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_champion-loading-screen-assets"
+  operationId: getChampionLoadingScreenAsset
+  parameters:
+    - name: champion
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/ChampionIdString.yaml
+    - name: num
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/SkinNumber.yaml
+  responses:
+    "200":
+      description: Champion loading screen asset
+      content:
+        image/jpeg:
+          schema: 
+            type: string
+            format: binary
+    "403":
+      description: Champion loading screen asset could not be loaded

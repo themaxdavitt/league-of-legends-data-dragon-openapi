@@ -1,0 +1,63 @@
+get:
+  summary: Get Data Dragon versions used in region
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_regions"
+  operationId: getRegionVersions
+  parameters:
+    - name: region
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+  responses:
+    "200":
+      description: Object mapping game components to Data Dragon versions used in region
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              "n":
+                type: object
+                properties:
+                  item:
+                    $ref: ../components/schemas/VersionString.yaml
+                  rune:
+                    $ref: ../components/schemas/VersionString.yaml
+                  mastery:
+                    $ref: ../components/schemas/VersionString.yaml
+                  summoner:
+                    $ref: ../components/schemas/VersionString.yaml
+                  champion:
+                    $ref: ../components/schemas/VersionString.yaml
+                  profileicon:
+                    $ref: ../components/schemas/VersionString.yaml
+                  map:
+                    $ref: ../components/schemas/VersionString.yaml
+                  language:
+                    $ref: ../components/schemas/VersionString.yaml
+                  sticker:
+                    $ref: ../components/schemas/VersionString.yaml
+              v:
+                $ref: ../components/schemas/VersionString.yaml
+              l:
+                $ref: ../components/schemas/LanguageString.yaml
+              cdn:
+                type: string
+                format: uri
+              dd:
+                $ref: ../components/schemas/VersionString.yaml
+              lg:
+                $ref: ../components/schemas/VersionString.yaml
+              css:
+                $ref: ../components/schemas/VersionString.yaml
+              profileiconmax:
+                type: number
+              store:
+                description: "Unknown type, set to a nullable string to placate validator"
+                type: string
+                nullable: true
+          example:
+            $ref: ../components/examples/RegionVersionsExample.json
+    "403":
+      description: Object mapping game components to Data Dragon versions used in region could not be loaded

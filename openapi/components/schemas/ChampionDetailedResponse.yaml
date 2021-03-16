@@ -1,0 +1,9 @@
+allOf:
+  - $ref: ./ChampionResponse.yaml
+  - type: object
+    properties:
+      data:
+        type: object
+        maxProperties: 1
+        additionalProperties:
+          $ref: ./ChampionDetailed.yaml

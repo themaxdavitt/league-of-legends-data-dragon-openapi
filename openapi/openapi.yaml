@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: League of Legends Data Dragon
+  description: Data Dragon is Riot's way of centralizing League of Legends game data and assets, including champions, items, runes, summoner spells, and profile icons - all of which can be used by third-party developers.
+  termsOfService: "https://developer.riotgames.com/terms"
+  version: 0.2021.75
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  
+servers:
+  - url: "https://ddragon.leagueoflegends.com"
+paths:
+  "/cdn/dragontail-{version}.tgz":
+    $ref: "paths/cdn@dragontail-{version}.tgz.yaml"
+  /api/versions.json:
+    $ref: paths/api@versions.json.yaml
+  "/realms/{region}.json":
+    $ref: "paths/realms@{region}.json.yaml"
+  /cdn/languages.json:
+    $ref: paths/cdn@languages.json.yaml
+  "/cdn/{version}/data/{language}/champion.json":
+    $ref: "paths/cdn@{version}@data@{language}@champion.json.yaml"
+  "/cdn/{version}/data/{language}/{champion}.json":
+    $ref: "paths/cdn@{version}@data@{language}@{champion}.json.yaml"
+  "/cdn/img/champion/splash/{champion}_{num}.jpg":
+    $ref: "paths/cdn@img@champion@splash@{champion}_{num}.jpg.yaml"
+  "/cdn/img/champion/loading/{champion}_{num}.jpg":
+    $ref: "paths/cdn@img@champion@loading@{champion}_{num}.jpg.yaml"
+  "/cdn/{version}/img/champion/{champion}.png":
+    $ref: "paths/cdn@{version}@img@champion@{champion}.png.yaml"
+  "/cdn/{version}/data/{language}/summoner.json":
+    $ref: "paths/cdn@{version}@data@{language}@summoner.json.yaml"
+  "/cdn/{version}/data/{language}/item.json":
+    $ref: "paths/cdn@{version}@data@{language}@item.json.yaml"

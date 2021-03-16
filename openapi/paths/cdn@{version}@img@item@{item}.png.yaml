@@ -1,0 +1,26 @@
+get:
+  summary: Get item asset
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon_champion-square-assets"
+  operationId: getItemAsset
+  parameters:
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+    - name: item
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Item asset
+      content:
+        image/png:
+          schema: 
+            type: string
+            format: binary
+    "403":
+      description: Item asset could not be loaded

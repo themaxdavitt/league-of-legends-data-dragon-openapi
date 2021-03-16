@@ -1,0 +1,199 @@
+type: object
+properties:
+  name:
+    type: string
+  rune:
+    type: object
+    properties:
+      isrune:
+        type: boolean
+      tier:
+        type: number
+      type:
+        type: string
+  gold:
+    type: object
+    properties:
+      base:
+        type: number
+      total:
+        type: number
+      sell:
+        type: number
+      purchasable:
+        type: boolean
+  group:
+    type: string
+  description:
+    type: string
+  colloq:
+    type: string
+  plaintext:
+    type: string
+  consumed:
+    type: boolean
+  stacks:
+    type: number
+  depth:
+    type: number
+  consumeOnFull:
+    type: boolean
+  from:
+    type: array
+    items:
+      type: string
+  into:
+    type: array
+    items:
+      type: string
+  specialRecipe:
+    type: number
+  inStore:
+    type: boolean
+  hideFromAll:
+    type: boolean
+  requireChampion:
+    type: string
+  requiredAlly:
+    type: string
+  stats:
+    type: object
+    properties:
+      FlatHPPoolMod:
+        type: number
+      rFlatHPModPerLevel:
+        type: number
+      FlatMPPoolMod:
+        type: number
+      rFlatMPModPerLevel:
+        type: number
+      PercentHPPoolMod:
+        type: number
+      PercentMPPoolMod:
+        type: number
+      FlatHPRegenMod:
+        type: number
+      rFlatHPRegenModPerLevel:
+        type: number
+      PercentHPRegenMod:
+        type: number
+      FlatMPRegenMod:
+        type: number
+      rFlatMPRegenModPerLevel:
+        type: number
+      PercentMPRegenMod:
+        type: number
+      FlatArmorMod:
+        type: number
+      rFlatArmorModPerLevel:
+        type: number
+      PercentArmorMod:
+        type: number
+      rFlatArmorPenetrationMod:
+        type: number
+      rFlatArmorPenetrationModPerLevel:
+        type: number
+      rPercentArmorPenetrationMod:
+        type: number
+      rPercentArmorPenetrationModPerLevel:
+        type: number
+      FlatPhysicalDamageMod:
+        type: number
+      rFlatPhysicalDamageModPerLevel:
+        type: number
+      PercentPhysicalDamageMod:
+        type: number
+      FlatMagicDamageMod:
+        type: number
+      rFlatMagicDamageModPerLevel:
+        type: number
+      PercentMagicDamageMod:
+        type: number
+      FlatMovementSpeedMod:
+        type: number
+      rFlatMovementSpeedModPerLevel:
+        type: number
+      PercentMovementSpeedMod:
+        type: number
+      rPercentMovementSpeedModPerLevel:
+        type: number
+      FlatAttackSpeedMod:
+        type: number
+      PercentAttackSpeedMod:
+        type: number
+      rPercentAttackSpeedModPerLevel:
+        type: number
+      rFlatDodgeMod:
+        type: number
+      rFlatDodgeModPerLevel:
+        type: number
+      PercentDodgeMod:
+        type: number
+      FlatCritChanceMod:
+        type: number
+      rFlatCritChanceModPerLevel:
+        type: number
+      PercentCritChanceMod:
+        type: number
+      FlatCritDamageMod:
+        type: number
+      rFlatCritDamageModPerLevel:
+        type: number
+      PercentCritDamageMod:
+        type: number
+      FlatBlockMod:
+        type: number
+      PercentBlockMod:
+        type: number
+      FlatSpellBlockMod:
+        type: number
+      rFlatSpellBlockModPerLevel:
+        type: number
+      PercentSpellBlockMod:
+        type: number
+      FlatEXPBonus:
+        type: number
+      PercentEXPBonus:
+        type: number
+      rPercentCooldownMod:
+        type: number
+      rPercentCooldownModPerLevel:
+        type: number
+      rFlatTimeDeadMod:
+        type: number
+      rFlatTimeDeadModPerLevel:
+        type: number
+      rPercentTimeDeadMod:
+        type: number
+      rPercentTimeDeadModPerLevel:
+        type: number
+      rFlatGoldPer10Mod:
+        type: number
+      rFlatMagicPenetrationMod:
+        type: number
+      rFlatMagicPenetrationModPerLevel:
+        type: number
+      rPercentMagicPenetrationMod:
+        type: number
+      rPercentMagicPenetrationModPerLevel:
+        type: number
+      FlatEnergyRegenMod:
+        type: number
+      rFlatEnergyRegenModPerLevel:
+        type: number
+      FlatEnergyPoolMod:
+        type: number
+      rFlatEnergyModPerLevel:
+        type: number
+      PercentLifeStealMod:
+        type: number
+      PercentSpellVampMod:
+        type: number
+  tags:
+    type: array
+    items:
+      type: string
+  maps:
+    type: object
+    additionalProperties:
+      type: boolean

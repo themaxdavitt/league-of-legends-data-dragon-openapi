@@ -1,0 +1,106 @@
+allOf:
+  - $ref: ./ChampionSummary.yaml
+  - type: object
+    properties:
+      skins:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+            num:
+              $ref: ./SkinNumber.yaml
+            name:
+              type: string
+            chromas:
+              type: boolean
+      lore:
+        type: string
+      allytips:
+        type: array
+        items:
+          type: string
+      enemytips:
+        type: array
+        items:
+          type: string
+      spells:
+        type: array
+        items:
+          $ref: ./Spell.yaml
+      passive:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          image:
+            $ref: ./Image.yaml
+      recommended:
+        type: array
+        items:
+          type: object
+          properties:
+            champion:
+              type: string
+            title:
+              type: string
+            map:
+              type: string
+            mode:
+              type: string
+            type:
+              type: string
+            customTag:
+              type: string
+            sortrank:
+              type: number
+            extensionPage:
+              type: boolean
+            useObviousCheckmark:
+              type: boolean
+            customPanel:
+              type: object
+              nullable: true
+            blocks:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  recMath:
+                    type: boolean
+                  recSteps:
+                    type: boolean
+                  minSummonerLevel:
+                    type: number
+                  maxSummonerLevel:
+                    type: number
+                  showIfSummonerSpell:
+                    type: string
+                  hideIfSummonerSpell:
+                    type: string
+                  appendAfterSection:
+                    type: string
+                  visibleWithAllOf:
+                    type: array
+                    items:
+                      type: string
+                  hiddenWithAnyOf:
+                    type: array
+                    items:
+                      type: string
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        count:
+                          type: number
+                        hideCount:
+                          type: boolean

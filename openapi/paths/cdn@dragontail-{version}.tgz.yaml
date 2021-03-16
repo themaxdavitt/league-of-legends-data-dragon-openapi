@@ -1,0 +1,21 @@
+get:
+  summary: Get a compressed tarball (.tgz) containing all Data Dragon assets for a patch
+  externalDocs:
+    url: "https://developer.riotgames.com/docs/lol#data-dragon"
+  operationId: getTarball
+  parameters:
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: ../components/schemas/VersionString.yaml
+  responses:
+    "200":
+      description: Compressed asset tarball
+      content:
+        application/x-tar:
+          schema:
+            type: string
+            format: binary
+    "403":
+      description: Compressed asset tarball could not be loaded

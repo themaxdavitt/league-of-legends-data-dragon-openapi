@@ -1,0 +1,6 @@
+# Dir for bundles
+dist/
+en_US/
+node_modules/
+dist.*
+dragontail-*
